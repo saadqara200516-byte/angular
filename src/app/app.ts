@@ -1,11 +1,14 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {Navbar} from './navbar/navbar'
+import{Sidebar} from './sidebar/sidebar';
+import { NewListMovies } from './new-list-movies/new-list-movies';
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [ Navbar, Sidebar, NewListMovies],
   selector: 'app-root',
   styleUrl: './app.scss',
   templateUrl: './app.html',
+  standalone: true,
 })
 export class App {
   protected readonly title = signal('my-movies');

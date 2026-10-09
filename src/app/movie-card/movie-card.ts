@@ -1,8 +1,8 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Movie } from '../new-list-movies/movie';
-
+import {RouterModule} from '@angular/router';
 @Component({
-  imports: [],
+  imports: [RouterModule],
   selector: 'app-movie-card',
   styleUrl: './movie-card.scss',
   templateUrl: './movie-card.html',

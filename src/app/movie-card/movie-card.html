@@ -1,5 +1,5 @@
-<li class="movie">
-  <img class="poster" (click)="onClick()" [src]="this.movie.image" alt="erreur">
+<li class="movie" [routerLink] = "['details',movie.id]">
+  <img class="poster" (click)="onClick()" [src]="this.movie.image"  alt="erreur">
   <div class="title">{{this.movie.title}}</div>
   <div class="year">{{this.movie.year}}</div>
 </li>

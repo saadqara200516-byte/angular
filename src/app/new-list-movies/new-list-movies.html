@@ -1,7 +1,9 @@
 <ul class="movie_container">
   @for (movie of movieList;track movie.id){
     <li>
-    <app-movie-card [movie] = 'movie' (addToFavorite)="addToFavorite($event)"></app-movie-card>
+   <!--<app-movie-card [movie] = 'movie' (addToFavorite)="addToFavorite($event)"></app-movie-card>-->
+      <app-movie-card [movie] = 'movie' ></app-movie-card>
+
     </li>
   }
 </ul>

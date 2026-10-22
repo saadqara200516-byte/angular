@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <div class="movie_container">
   <div class = "header">
     <div class="title_block">
@@ -12,11 +13,36 @@
     <div class="rating_block">
       <div class="rating">9<span>/10</span></div>
       <div class="votes">12k votes</div>
+=======
+@if (movie) {
+<div class="movie_container">
+  <div class = "header"[style.background-image]="movie.backdrop_path
+       ? 'linear-gradient(to right, #1a1a1a 35%, rgba(26,26,26,0.6) 100%), url(https://image.tmdb.org/t/p/w1280' + movie.backdrop_path + ')'
+       : 'none'">
+    <div class="title_block">
+      <div class="title">{{movie.original_title}}</div>
+      <div class="tagline">{{ movie.tagline }}</div>
+      <div class="cat_date_duration_container">
+        @for (genre of movie.genres ; track genre.id){
+          <div class="catergory">{{genre.name}} </div>
+        }
+        <div class="date">{{ movie.release_date}}</div>
+        <div class="duration">{{(movie.runtime! - movie.runtime! % 60) / 60 }}h {{ movie.runtime! % 60 }}min</div>
+      </div>
+    </div>
+    <div class="rating_block">
+      <div class="rating">{{movie.vote_average}}</div>
+      <div class="votes">{{movie.vote_count}}</div>
+>>>>>>> Stashed changes
     </div>
   </div>
   <div class="row g-4">
     <div class="col-12 col-md-4">
+<<<<<<< Updated upstream
       <img class="poster img-fluid rounded" src="inception.jpeg" alt="erreur">
+=======
+      <img class="poster img-fluid rounded" [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="erreur">
+>>>>>>> Stashed changes
       <div class="row g-5 py-4">
         <div class="col-12 col-md-4">
           <button class="btn btn-outline-light action_btn w-100">
@@ -39,7 +65,11 @@
 
     <div class="col-12 col-md-8">
       <h3 class="section_title">Overview</h3>
+<<<<<<< Updated upstream
       <p class="description">Cobb, a skilled thief who commits corporate espionage by infiltrating the subconscious of his targets is offered a chance to regain his old life as payment for a task considered to be impossible: “inception”, the implantation of another person’s idea into a target’s subconscious.</p>
+=======
+      <p class="description">{{movie.overview}}</p>
+>>>>>>> Stashed changes
 
       <h3 class="section_title mt-4">Trailer</h3>
       <iframe class="trailer rounded border-0"
@@ -86,3 +116,9 @@
   </div>
 
 </div>
+<<<<<<< Updated upstream
+=======
+} @else {
+  <p>Loading...</p>
+}
+>>>>>>> Stashed changes

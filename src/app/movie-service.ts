@@ -41,8 +41,15 @@ export class MovieService {
   getAllMovies(){
     return this.movieList;
   }
+<<<<<<< Updated upstream
   getMovieById(id:number):Movie|undefined{
     return this.movieList.find((movie) => movie.id === id);
 
+=======
+  getMovieById(id: number) {
+    const url = `https://api.themoviedb.org/3/movie/${id}?api_key=${this.API_KEY}`;
+    console.log('url:', url);
+    return this.http.get<any>(url);
+>>>>>>> Stashed changes
   }
 }

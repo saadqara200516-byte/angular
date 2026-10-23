@@ -1,0 +1,16 @@
+<ul class="movie_container">
+  @for (movie of movieList;track movie.id){
+    <li>
+   <!--<app-movie-card [movie] = 'movie' (addToFavorite)="addToFavorite($event)"></app-movie-card>-->
+      <app-movie-card [movie] = 'movie' ></app-movie-card>
+
+    </li>
+  }
+</ul>
+
+<h3 class style="margin-left: 50px">Favorites</h3>
+<ul class = "movie_container">
+@for (movie of favorites;track movie.id){
+  <li><app-movie-card [movie] = 'movie'></app-movie-card></li>
+}
+</ul>

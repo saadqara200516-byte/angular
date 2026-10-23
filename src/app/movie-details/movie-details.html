@@ -1,0 +1,92 @@
+@if (movie) {
+  <div class="movie_container">
+    <div class="header" [style.background-image]="movie.backdrop_path
+       ? 'linear-gradient(to right, #1a1a1a 35%, rgba(26,26,26,0.6) 100%), url(https://image.tmdb.org/t/p/w1280' + movie.backdrop_path + ')'
+       : 'none'">
+      <div class="title_block">
+        <div class="title">{{movie.original_title}}</div>
+        <div class="tagline">{{ movie.tagline }}</div>
+        <div class="cat_date_duration_container">
+          @for (genre of movie.genres; track genre.id) {
+            <div class="catergory">{{genre.name}}</div>
+          }
+          <div class="date">{{ movie.release_date}}</div>
+          <div class="duration">{{(movie.runtime! - movie.runtime! % 60) / 60 }}h {{ movie.runtime! % 60 }}min</div>
+        </div>
+      </div>
+      <div class="rating_block">
+        <div class="rating">{{movie.vote_average}}</div>
+        <div class="votes">{{movie.vote_count}}</div>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-12 col-md-4">
+        <img class="poster img-fluid rounded" [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="erreur">
+        <div class="row g-5 py-4">
+          <div class="col-12 col-md-4">
+            <button class="btn btn-outline-light action_btn w-100">
+              <i class="bi bi-heart"></i>
+              Liked
+            </button>
+          </div>
+          <div class="col-12 col-md-4">
+            <button class="btn btn-outline-light action_btn w-100">
+              <i class="bi bi-bookmark-plus"></i> Watchlist
+            </button>
+          </div>
+          <div class="col-12 col-md-4">
+            <button class="btn btn-outline-light action_btn w-100">
+              <i class="bi bi-bookmark-check"></i>Watched</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-8">
+        <h3 class="section_title">Overview</h3>
+        <p class="description">{{movie.overview}}</p>
+
+        <h3 class="section_title mt-4">Trailer</h3>
+        <iframe class="trailer rounded border-0"
+                src="https://www.youtube.com/embed/YoHD9XEInc0"
+                title="Trailer"
+                allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+    <div class="cast_section mt-5">Cast</div>
+    <div class="row g-4">
+      <div class="col-6 col-md-2">
+        <img class="actor_image" src="inception.jpeg" alt="Actor name">
+        <div class="actor_name">Actor name</div>
+        <div class="actor_role">Character</div>
+      </div>
+      <div class="col-6 col-md-2">
+        <img class="actor_image" src="inception.jpeg" alt="Actor name">
+        <div class="actor_name">Actor name</div>
+        <div class="actor_role">Character</div>
+      </div>
+      <div class="col-6 col-md-2">
+        <img class="actor_image" src="inception.jpeg" alt="Actor name">
+        <div class="actor_name">Actor name</div>
+        <div class="actor_role">Character</div>
+      </div>
+      <div class="col-6 col-md-2">
+        <img class="actor_image" src="inception.jpeg" alt="Actor name">
+        <div class="actor_name">Actor name</div>
+        <div class="actor_role">Character</div>
+      </div>
+      <div class="col-6 col-md-2">
+        <img class="actor_image" src="inception.jpeg" alt="Actor name">
+        <div class="actor_name">Actor name</div>
+        <div class="actor_role">Character</div>
+      </div>
+      <div class="col-6 col-md-2">
+        <img class="actor_image" src="inception.jpeg" alt="Actor name">
+        <div class="actor_name">Actor name</div>
+        <div class="actor_role">Character</div>
+      </div>
+    </div>
+  </div>
+} @else {
+  <p>Loading...</p>
+}

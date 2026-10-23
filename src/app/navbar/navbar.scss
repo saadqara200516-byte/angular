@@ -1,0 +1,105 @@
+
+/* Navbar */
+.navbar-custom {
+  background-color: #14181c;
+  border-bottom: 1px solid #303840;
+  padding: 12px 0;
+  margin-left : 50px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Brand */
+.navbar-custom .navbar-brand {
+  color: #d68408;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.navbar-custom .navbar-brand:hover {
+  color: #d68408;
+}
+
+/* Navigation links */
+.navbar-custom .nav-link {
+  color: #ffffff;
+  font-weight: 500;
+  margin: 0 5px;
+  transition: color 0.2s ease;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+  color: #d68408;
+}
+
+/* Dropdown */
+.navbar-custom .dropdown-menu {
+  background-color: #202830;
+  border: 1px solid #303840;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.navbar-custom .dropdown-item {
+  color: #c8d0d8;
+  border-radius: 5px;
+  padding: 9px 12px;
+}
+
+.navbar-custom .dropdown-item:hover {
+  background-color: #303a44;
+  color: #5d3700;
+}
+
+/* Search input */
+.navbar-custom .search-input {
+  background-color: #202830;
+  border: 1px solid #39434e;
+  color: white;
+  border-radius: 6px;
+}
+
+.navbar-custom .search-input::placeholder {
+  color: #89939e;
+}
+
+.navbar-custom .search-input:focus {
+  background-color: #202830;
+  color: white;
+  border-color: #d68408;
+  box-shadow: 0 0 0 0.2rem rgb(173 107 1);
+}
+
+/* Buttons */
+.btn-login {
+  color: #c8d0d8;
+  border: 1px solid transparent;
+}
+
+.btn-login:hover {
+  color: #5d3700;
+}
+
+.btn-signup {
+  background-color: #ad6b01;
+  color: #14181c;
+  border: 1px solid #d68408;
+  font-weight: 700;
+  border-radius: 6px;
+}
+
+.btn-signup:hover {
+  background-color: #ad6b01;
+  border-color: #ad6b01;
+  color: #14181c;
+}
+
+/* Mobile menu button */
+.navbar-custom .navbar-toggler {
+  border-color: #49535e;
+}
+
+.navbar-custom .navbar-toggler:focus {
+  box-shadow: 0 0 0 0.15rem rgb(93 55 0);
+}

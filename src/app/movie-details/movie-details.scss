@@ -4,35 +4,40 @@
   padding: 20px 24px;
   color: white;
 }
-.header{
+.header {
   display: flex;
   justify-content: space-between;
-  align-items:flex-start;
+  align-items: flex-start;
+  background-color: #222;
+  background-size: cover;
+  background-position: center top;
+  padding: 40px;
+  border-radius: 8px;
 }
-.title{
+.title {
   font-size: 42px;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
 }
-.cat_date_duration_container{
+.cat_date_duration_container {
   display: flex;
   align-items: center;
   height: 100%;
   font-family: 'Sen', sans-serif;
   gap: 24px;
   margin-top: 12px;
-  color:#aaa;
+  color: #aaa;
 }
-.poster{
+.poster {
   width: 40%;
   aspect-ratio: 5/3;
   object-fit: cover;
   border-radius: 8px;
 }
-.rating_block{
+.rating_block {
   text-align: left;
 }
-.tagline{
+.tagline {
   margin-top: 6px;
   font-family: 'Sen', sans-serif;
   font-style: italic;
@@ -77,40 +82,24 @@
 .actor_image {
   width: 100%;
   aspect-ratio: 1 / 1;
-  object-fit:cover;
-  border-radius : 50%
-
+  object-fit: cover;
+  border-radius: 50%;
 }
-
 .actor_name {
   margin-top: 8px;
   font-weight: bold;
   font-size: 14px;
   text-align: center;
-<<<<<<< Updated upstream
-  ;
-=======
-;
->>>>>>> Stashed changes
 }
-
 .actor_role {
   font-size: 13px;
   color: #aaa;
   text-align: center;
 }
-.cast_section{
+.cast_section {
   color: #f1b144;
   font-family: 'Poppins', sans-serif;
   font-size: 28px;
   padding: 20px 10px;
   font-weight: bold;
 }
-<<<<<<< Updated upstream
-=======
-.header {
-  background-color: #222;
-  padding: 40px;
-  border-radius: 8px;
-}
->>>>>>> Stashed changes

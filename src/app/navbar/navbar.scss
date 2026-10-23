@@ -1,76 +1,105 @@
-.navbar {
-  width: 100%;
-  height: 50px;
-  top: 0;
-  background-color: rgb(0 0 0 / 0.36);
+
+/* Navbar */
+.navbar-custom {
+  background-color: #14181c;
+  border-bottom: 1px solid #303840;
+  padding: 12px 0;
+  margin-left : 50px;
+  font-family: 'Poppins', sans-serif;
 }
 
-.navbar-container {
-  width: 100%;
-  padding: 10px 50px;
-  display: flex;
-  align-items: center;
-  height: 100%;
-  font-family: 'Sen', sans-serif;
+/* Brand */
+.navbar-custom .navbar-brand {
+  color: #d68408;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
 }
 
-.logo_container {
-  flex: 1;
+.navbar-custom .navbar-brand:hover {
+  color: #d68408;
 }
 
-.logo {
-  color: orange;
+/* Navigation links */
+.navbar-custom .nav-link {
+  color: #ffffff;
+  font-weight: 500;
+  margin: 0 5px;
+  transition: color 0.2s ease;
 }
 
-.menu_container {
-  display: flex;
-  flex: 6;
-  align-items: center;
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+  color: #d68408;
 }
 
-.menu-list {
-  display: flex;
-  list-style: none;
+/* Dropdown */
+.navbar-custom .dropdown-menu {
+  background-color: #202830;
+  border: 1px solid #303840;
+  border-radius: 8px;
+  padding: 8px;
 }
 
-.menu-list-item {
-  margin: 15px;
+.navbar-custom .dropdown-item {
+  color: #c8d0d8;
+  border-radius: 5px;
+  padding: 9px 12px;
 }
 
-.menu-btn {
-  background: none;
-  border: none;
+.navbar-custom .dropdown-item:hover {
+  background-color: #303a44;
+  color: #5d3700;
+}
+
+/* Search input */
+.navbar-custom .search-input {
+  background-color: #202830;
+  border: 1px solid #39434e;
   color: white;
-  font: inherit;
-  cursor: pointer;
+  border-radius: 6px;
 }
 
-.menu-btn:hover {
-  color: orange;
+.navbar-custom .search-input::placeholder {
+  color: #89939e;
 }
 
-.menu-btn.active {
-  font-weight: bold;
-}
-
-.search-bar {
-  width: 250px;
-  height: 36px;
-  padding: 0 16px;
-  margin-left: 100px;
-  border: none;
-  border-radius: 20px;
-  outline: none;
-  background-color: #333;
+.navbar-custom .search-input:focus {
+  background-color: #202830;
   color: white;
+  border-color: #d68408;
+  box-shadow: 0 0 0 0.2rem rgb(173 107 1);
 }
 
-.search-bar::placeholder {
-  color: gray;
+/* Buttons */
+.btn-login {
+  color: #c8d0d8;
+  border: 1px solid transparent;
 }
 
-.profile_picture {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
+.btn-login:hover {
+  color: #5d3700;
+}
+
+.btn-signup {
+  background-color: #ad6b01;
+  color: #14181c;
+  border: 1px solid #d68408;
+  font-weight: 700;
+  border-radius: 6px;
+}
+
+.btn-signup:hover {
+  background-color: #ad6b01;
+  border-color: #ad6b01;
+  color: #14181c;
+}
+
+/* Mobile menu button */
+.navbar-custom .navbar-toggler {
+  border-color: #49535e;
+}
+
+.navbar-custom .navbar-toggler:focus {
+  box-shadow: 0 0 0 0.15rem rgb(93 55 0);
 }

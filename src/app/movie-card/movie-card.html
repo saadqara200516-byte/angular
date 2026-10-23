@@ -1,12 +1,5 @@
-<<<<<<< Updated upstream
-<li class="movie" [routerLink] = "['details',movie.id]">
-  <img class="poster" (click)="onClick()" [src]="this.movie.image"  alt="erreur">
-  <div class="title">{{this.movie.title}}</div>
-  <div class="year">{{this.movie.year}}</div>
-=======
 <li class="movie">
-  <img class="poster" (click)="onClick()" [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="erreur" [routerLink]="['/details', movie.id]">
+  <img class="poster" (click)="onClick()" [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="erreur">
   <div class="title">{{this.movie.original_title}}</div>
   <div class="year">{{this.movie.release_date}}</div>
->>>>>>> Stashed changes
 </li>

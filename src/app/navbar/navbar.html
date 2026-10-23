@@ -1,20 +1,142 @@
-<div class = "navbar">
-  <div class="navbar-container">
-    <div class="logo_container"><h1 class = "logo">LetterBoxd</h1>
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Letterboxd - Discover Movies</title>
+
+
+</head>
+
+<body>
+
+<!-- Main Navbar -->
+<nav class="navbar navbar-expand-lg navbar-custom"
+     data-bs-theme="dark">
+
+  <div class="container-fluid px-4">
+
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">
+      Letterboxd
+    </a>
+
+    <!-- Mobile Toggle Button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNavbar"
+      aria-controls="mainNavbar"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible Navbar Content -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+
+      <!-- Main Navigation Links -->
+      <ul class="navbar-nav me-auto mb-3 mb-lg-0 ms-lg-4">
+
+        <li class="nav-item">
+          <a class="nav-link active"
+             aria-current="page"
+             href="#">
+            Home
+          </a>
+        </li>
+
+        <!-- Movies Dropdown -->
+        <li class="nav-item dropdown">
+
+          <a class="nav-link dropdown-toggle"
+             href="#"
+             role="button"
+             data-bs-toggle="dropdown"
+             aria-expanded="false">
+            Discover
+          </a>
+
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="#">
+                Popular Movies
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="#">
+                Top Rated
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="#">
+                New Releases
+              </a>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="#">
+                Browse by Genre
+              </a>
+            </li>
+          </ul>
+
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            Lists
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            Reviews
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            Watchlist
+          </a>
+        </li>
+
+      </ul>
+
+      <!-- Right Side: Search and Authentication -->
+      <div class="d-flex flex-column flex-lg-row
+                            align-items-stretch align-items-lg-center gap-2">
+
+        <!-- Search -->
+        <app-search-bar></app-search-bar>
+
+        <!-- Authentication -->
+        <div class="d-flex align-items-center gap-2">
+
+          <a class="btn btn-login" href="#">
+            Log in
+          </a>
+
+          <a class="btn btn-signup px-3" href="#">
+            Sign up
+          </a>
+
+        </div>
+
+      </div>
 
     </div>
-    <div class="menu_container">
-      <ul class="menu-list">
-        <li class="menu-list-item"><button class="menu-btn active">Home</button></li>
-        <li class="menu-list-item"><button class="menu-btn">Movies</button></li>
-        <li class="menu-list-item"><button class="menu-btn">Series</button></li>
-        <li class="menu-list-item"><button class="menu-btn">Popular</button></li>
-        <li class="menu-list-item"><button class="menu-btn">Trends</button></li>
-      </ul>
-      <input class="search-bar form-control-sm bg-dark text-white border-0 rounded-pill ms-5 w-auto"
-             type="text" placeholder="Search a movie...">
-    </div>
-    <p></p>
-    <button class="menu-btn"><img class="profile_picture" src="profile_picture.png" alt="erreur"></button>
   </div>
-</div>
+</nav>
+
+</body>
+</html>

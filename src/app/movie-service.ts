@@ -1,55 +1,18 @@
-import { Service } from '@angular/core';
-import { Movie } from './new-list-movies/movie';
+import { Service, inject } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
 @Service()
 export class MovieService {
-  protected movieList:Array<Movie> = [
-    {
-      id: 1,
-      title: 'Inception',
-      category: 'Action',
-      year: '2003',
-      image: '500_days_of_summer.jpeg',
-    },
-    {
-      id: 2,
-      title: 'The best of youth',
-      category: 'Drama',
-      year: '2003',
-      image: 'best_of_youth_poster.jpg',
-    },
-    {
-      id: 3,
-      title: 'Inception',
-      category: 'Action',
-      year: '2003',
-      image: 'inception.jpeg',
-    },
-    {
-      id: 4,
-      title: 'Eternal sunshine',
-      category: 'Drama',
-      year: '2000',
-      image: 'eternal_sunshine.jpeg',
-    },
-    {
-      id: 5,
-      title: 'nice_guys',
-      category: 'Action',
-      year: '2020',
-      image: 'nice_guys.jpeg',
-    },]
-  getAllMovies(){
-    return this.movieList;
-  }
-<<<<<<< Updated upstream
-  getMovieById(id:number):Movie|undefined{
-    return this.movieList.find((movie) => movie.id === id);
+  http = inject(HttpClient);
+  API_KEY = '73041659f74e186d79b17b39daf0bcd8';
+  url = 'https://api.themoviedb.org/3/movie/popular';
 
-=======
+  getAllMovies() {
+    return this.http.get<any>(this.url + '?api_key=' + this.API_KEY) //+ '&page=2'//);
+  }
+
   getMovieById(id: number) {
     const url = `https://api.themoviedb.org/3/movie/${id}?api_key=${this.API_KEY}`;
-    console.log('url:', url);
     return this.http.get<any>(url);
->>>>>>> Stashed changes
   }
 }

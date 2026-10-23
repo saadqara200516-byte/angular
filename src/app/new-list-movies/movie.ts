@@ -1,11 +1,3 @@
-<<<<<<< Updated upstream
-export interface Movie{
-  title: String;
-  category: String;
-  year: String;
-  id: Number;
-  image: string;
-=======
 export interface Genre {
   id: number;
   name: string;
@@ -38,5 +30,4 @@ export interface Movie {
   status?: string;
   homepage?: string;
   imdb_id?: string;
->>>>>>> Stashed changes
 }
